@@ -32,6 +32,9 @@ summary::marker {
 .container {
     margin-top: 40px;
     width: 70%;
+    text-align: center;
+    justify-content: center;
+    font-size: 24px;
 }
 
 .topbar {
@@ -39,6 +42,8 @@ summary::marker {
     color: black;
     text-align: center;
     justify-content: center;
+    height: 80px;
+    font-size: 32px;
 }
 
 .topbar a:link {
