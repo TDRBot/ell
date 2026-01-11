@@ -46,6 +46,8 @@ summary::marker {
     justify-content: center;
     height: 80px;
     font-size: 32px;
+    align-content: center;
+    text-shadow: 2px 1px #008408;
 }
 
 .topbar a:link {
