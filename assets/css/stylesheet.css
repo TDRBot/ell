@@ -114,3 +114,11 @@ a:active {
   margin-top: 40px;
   margin-bottom: 40px;
 }
+
+.windows {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("https://tdrbot.github.io/ell/images/windows-20.png") center/contain no-repeat;
+  vertical-align: middle;
+}
