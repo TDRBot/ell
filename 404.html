@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DrippHeadbop.sb3</title>
+    <link rel="stylesheet" href="https://tdrbot.github.io/ell/assets/css/404.css">
+  </head>
+  <body>
+    <div class="center">
+      <img id="dripp" onclick="start" src="https://tdrbot.github.io/ell/assets/images/dripp_headbop_idle.png" class="dripp_headbop">
+    </div>
+    <audio id="music" loop>
+      <source src="https://tdrbot.github.io/ell/assets/audio/mus_notfound.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      let active = false;
+      
+      function start() {
+        if (active == false) {
+          active = true;
+          document.getElementById("dripp").src = "https://tdrbot.github.io/ell/assets/images/dripp_headbop.gif";
+          document.getElementById("music").play();
+        }
+      }
+    </script>
+  </body>
+</html>
