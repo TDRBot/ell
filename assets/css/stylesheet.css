@@ -8,7 +8,7 @@
 }
 
 body {
-    image-rendering: pixelated, -moz-crisp-edges;
+    image-rendering: pixelated;
     color: white;
     background-color: black;
     text-align: center;
@@ -28,6 +28,10 @@ details > summary {
 
 summary::marker {
   color: white;
+}
+
+img {
+  image-rendering: pixelated;
 }
 
 .container {
