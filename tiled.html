@@ -17,13 +17,15 @@
         <div class="container">
             <h1>Custom Maps Tutorial</h1>
             <img src="/ell/assets/images/ELL_Tiled_logo.png" class="img-important">
-            <p>ESCAPE LIMTEX LABORATORIES supports making custom maps for the game using Tiled in v0.6.0 and beyond!</p>
+            <p>ESCAPE LIMTEX LABORATORIES supports making custom maps for the game using Tiled in v0.6.0 of the game and beyond!</p>
             <p>In order to make custom maps for the game, you'll have to download Tiled, the game's Tiled extension, and tileset from the links below.</p>
             <a href="https://thorbjorn.itch.io/tiled" target="_blank">Tiled (Latest version)</a>
             <br>
             <a href="/ell/assets/level-editor/escape-limtex-editor.js" download>escape-limtex-editor.js</a>
             <br>
             <a href="/ell/assets/level-editor/Tileset_v0.6.0.zip" download>Tileset_v0.6.0.zip</a>
+            <br>
+            <p><i>Your game version does NOT have to be the exact version of these downloads for them to function, they are the minimum version needed to support these tools.</i></p>
             <h1>Setting up Tiled for ESCAPE LIMTEX LABORATORIES.</h1>
             <p>First, you'll have to enable <b>Tiled's JSON capabilities</b>, you can do so by following these steps.</p>
             <p>Navigate to the "edit" tab and press 'preferences.'</p>
@@ -36,7 +38,64 @@
             <img src="/ell/assets/images/level-editor/run_1.png">
             <p>Next, open a new Windows explorer window and drag the extension to the Tiled extensions folder.</p>
             <img src="/ell/assets/images/level-editor/add_extension.gif" class="img-important" style="width: inherit">
-            <p>todo: finish this later when i have time.</p>
+            <p>Congratulations! Tiled can now be used to make maps for ESCAPE LIMTEX LABORATORIES!</p>
+            <h1>Building a map in Tiled</h1>
+            <p>Now it's time to get ready to build a map for Tiled, it's recommended you read <a href="https://doc.mapeditor.org/en/stable/manual/introduction/" target="_blank">Tiled's official documentation</a> on their website.</p>
+            <p>It is important to note <i>the level editor ONLY supports tile and object layers, and the native tiles packaged with the tileset.</i></p>
+            <br>
+            <h2>Trigger parameters</h2>
+            <p>Some tiles require to be an object, and require specific data to function. Any tiles with a "DATA" tag on them in the tilset are tiles that require to be an object.</p>
+            <p><i>Tip: To make a tile adhere to the grid, hold CTRL! Also make sure the object is a tile object.</i></p>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/sign_trigger.png">
+            <h3>SIGN TRIGGER</h3>
+            <p>This trigger is mainly used for displaying text, this isn't recommended for use since it only supports certain text hard-coded in the current version of the game you're running, and not custom text.</p>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/enemy_trigger.png">
+            <h3>ENEMY SPAWNER</h3>
+            <p>This trigger is a very important trigger since it allows you to spawn and render an enemy! Currently as of v0.6.1, the following enemy types can be used with the trigger. (Case sensitive)</p>
+            <ul>
+                <li>lightbropy</li>
+                <li>kone</li>
+            </ul>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/npc_trigger.png">
+            <h3>NPC SPAWNER</h3>
+            <p>This trigger allows you to spawn and render any hard-coded NPCs in the game, currently in v0.6.1, you can spawn the following NPCs with these IDs. (ALSO case sensitive)</p>
+            <ul>
+                <li>dripp_headpat</li>
+                <li>yandere_ig</li>
+            </ul>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/switch_trigger.png">
+            <h3>SWITCH TRIGGER</h3>
+            <p>This trigger enables some of abilities of ESCAPE LIMTEX LABORATORIES's trigger system, as it allows you to activate any ID-activated objects and triggers. Currently, as of v0.6.1, only door triggers are affected by this trigger.</p>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/moving_wall_trigger.png">
+            <h3>DOOR SPAWNER</h3>
+            <p>This trigger allows you to spawn and render a door, that can be opened using triggers. If you want to change the direction the door moves in, use the follow terms in the switch's ID. (Guess what? Case sensitive!)</p>
+            <ul>
+                <li>down</li>
+                <li>left</li>
+                <li>right</li>
+            </ul>
+            <p>UP is ignored, since it's the default direction.</p>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/item_trigger.png">
+            <h3>ITEM SPAWNER</h3>
+            <p>With this trigger, you can spawn a one-time use item. Currently as of v0.6.1, you can spawn the following items with their numerical IDs.</p>
+            <ul>
+                <li>Grenades (ID #001)</li>
+                <li>Medkit (ID #002)</li>
+                <li>Fruit (ID #003)</li>
+                <li>Cone (ID #004)</li>
+                <li>Strange Syringe (ID #005)</li>
+                <li>Box (ID #006)</li>
+            </ul>
+            <hr>
+            <img class="img-left sixty-four" src="/ell/assets/images/level-editor/tiles/money_trigger.png">
+            <h3>MONEY TRIGGER</h3>
+            <p>It's pretty self-explanatory, you type in a number, this spawns a money object that gives you that amount of money.</p>
         </div>
     </body>
 </html>

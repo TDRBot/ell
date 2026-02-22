@@ -122,3 +122,14 @@ a:active {
   background: url("https://tdrbot.github.io/ell/assets/images/windows-20.png") center/contain no-repeat;
   vertical-align: middle;
 }
+
+.img-left {
+  text-align: left;
+  justify-content: left;
+  display: inline-flex;
+}
+
+.sixty-four {
+  width: 64px;
+  height: 64px;
+}
