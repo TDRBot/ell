@@ -1,0 +1,89 @@
+<!-- WOAH HEY THERE BUSTER! -->
+<!-- If you are viewing this, STOP! -->
+<!-- or something idk -->
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>ELL Sign-in</title>
+    <style>
+      @font-face {
+        font-family: Determination;
+        src: url('https://tdrbot.github.io/fonts/8bitoper.ttf');
+      }
+
+      h1 {
+        font-weight: normal;
+        color: yellow;
+      }
+
+      button, input {
+        background: black;
+        border: solid 2px white;
+        color: white;
+        font-family: Determination;
+      }
+
+      input {
+        width: 40%;
+        padding: 5px;
+      }
+
+      button {
+        width: 20%;
+        padding: 10px;
+      }
+      
+      body {
+        background-color: black;
+        font-family: Determination;
+        color:white;
+        padding: 15px;
+        text-align: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+      <h1 class="title">Sign into ESCAPE LIMTEX LABORATORIES.</h1>
+      <p>Sign into GameJolt to earn achievements, upload, and favorite levels in ESCAPE LIMTEX LABORATORIES.</p>
+      <hr>
+      <form id="login">
+        <label for="username">Username:</label>
+        <input name="username" id="username" type="text">
+        <br>
+        <br>
+        <label for="game_token">Game Token:</label>
+        <input name="game_token" id="game_token" type="password">
+        <br>
+        <br>
+        <i style="font-size:13.5px">To find your game token, go to GameJolt's main page, click your profile picture, and press "Game Token."</i>
+        <br>
+        <br>
+        <button type="submit">Login</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <i style="font-size: 10px">Be wary of scams! <span style="color:yellow">Some bad actors may try to use this page's code on a separate, unofficial website to steal your GameJolt game token!</span> Please, treat your game token the same way you would treat your passwords. And for some games (including ELL), <span style="color:red">your saved data, uploaded levels, and online usage may be at risk!</span> Only trust websites on, or from <span style="color:yellow">https://tdrbot.github.io</span>. <span style="color:red">Do NOT trust links ending in domains similar to '.github.io' that are NOT 'github.io,' if this is embedded as 'about:blank' or anywhere online (this should ONLY be viewed in ELL itself), if you're accessing this page from a 3rd party/modded ELL client, or if this warning is absent entirely.</span></i>
+        <br>
+        <br>
+        <i style="font-size: 10px">If your account's game token gets compromised, it may be locked from using ELL's online functionality permanently! If you want to reactivate your account if this happens, please visit our Discord server and make a ticket. Also please change your game token before contacting us.</i>
+      </form>
+      <script>
+        document.getElementById("login").addEventListener("submit", (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+
+            const data = {
+                username: formData.get("username"),
+                game_token: formData.get("game_token")
+            };
+
+            window.parent.postMessage(data, "*");
+        });
+</script>
+  </body>
+</html>
